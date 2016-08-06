@@ -1,0 +1,14 @@
+  _      _____ _____ _   _ _    _ __  __ 
+ | |    |_   _/ ____| \ | | |  | |  \/  |
+ | |      | || |  __|  \| | |  | | \  / |
+ | |      | || | |_ | . ` | |  | | |\/| |
+ | |____ _| || |__| | |\  | |__| | |  | |
+ |______|_____\_____|_| \_|\____/|_|  |_|
+                                 
+LIGNUM Firmware Uploader
+
+CPU Model: CORTEX
+Version: 1.0 | Released: 06 august 2016
+Author: Matteo Pisani | matteo.pisani@remoriavr.com
+Copyright: Remoria VR S.r.l.
+
