@@ -22,7 +22,7 @@ echo "Input the LIGNUM cu.* Port (without quotes|e.g.: cu.usbmodem1D11): "
 echo "\r"
 read port
 echo "\r"
-echo "You choose $port port"
+echo "You choosed $port port"
 echo "\r"
 echo "Performing LIGNUM RESET"
 python ./serial_reset.py "/dev/$port"

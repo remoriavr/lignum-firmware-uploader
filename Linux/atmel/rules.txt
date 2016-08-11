@@ -1,0 +1,6 @@
+sudo cp lignum.rules /etc/udev/rules.d/
+sudo reload udev
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+

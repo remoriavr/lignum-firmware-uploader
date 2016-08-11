@@ -8,27 +8,27 @@ echo "
 
  LIGNUM Firmware Uploader
 
- CPU Model: ATMEL
- Version: 1.0 | Released: 06 august 2016
+ CPU Model: CORTEX
+ Version: 1.0 | Released: 10 august 2016
  Author: Matteo Pisani | matteo.pisani@remoriavr.com
  Copyright: Remoria VR S.r.l.
 "
 cd "`dirname "$0"`"
-echo "Available /dev/cu.* Ports: "
+echo "Available /dev/tty.* Ports: "
 echo "\r"
-ls /dev/cu*
+ls /dev/tty*
 echo "\r"
-echo "Input the LIGNUM cu.* Port (without quotes|e.g.: cu.usbmodem1D11): "
+echo "Input the LIGNUM tty.* Port (without quotes|e.g.: ttyACM0): "
 echo "\r"
 read port
 echo "\r"
-echo "You choosed $port port"
+echo "You choose $port port"
 echo "\r"
 echo "Performing LIGNUM RESET"
 python ./serial_reset.py "/dev/$port"
 sleep 3
 echo "\r"
 echo "Flashing LIGNUM Firmware..."
-./avrdude -C./avrdude.conf -v -patmega32u4 -cavr109 -P/dev/$port -b57600 -D -Uflash:w:./LIGNUM_Firmware.hex:i
+./bossac -i -d --port=$port -U true -i -e -w -v ./LIGNUM_Firmware.bin -R
 echo "\r"
 echo "LIGNUM Firmware updated successully."
